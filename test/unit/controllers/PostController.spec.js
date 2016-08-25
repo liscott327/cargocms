@@ -72,6 +72,20 @@ describe('about Post Controller operation.', function() {
       }
     });
 
+    it('findOne Post should be success123.', async (done) => {
+      try {
+        const res = await request(sails.hooks.http.app)
+        .get(`/api/admin/post/5`);
+        res.status.should.be.eq(200);
+        console.log(res.id);
+        res.body.success.should.be.true;
+        done();
+      } catch (e) {
+        done(e);
+      }
+    });
+
+
     it('update Post should success.', async (done) => {
       try {
         const data = {

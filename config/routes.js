@@ -61,6 +61,12 @@ module.exports.routes = {
   'put /api/admin/user/:id': 'api/admin/UserController.update',
   'delete /api/admin/user/:id': 'api/admin/UserController.destroy',
 
+  'get /api/admin/slogan': 'api/admin/SloganController.find',
+  'get /api/admin/slogan/:id': 'api/admin/SloganController.findOne',
+  'post /api/admin/slogan': 'api/admin/SloganController.create',
+  'put /api/admin/slogan/:id': 'api/admin/SloganController.update',
+  'delete /api/admin/slogan/:id': 'api/admin/SloganController.destroy',
+
   'get /api/admin/post': 'api/admin/PostController.find',
   'get /api/admin/post/:id': 'api/admin/PostController.findOne',
   'post /api/admin/post': 'api/admin/PostController.create',
